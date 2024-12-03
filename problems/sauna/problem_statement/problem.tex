@@ -1,0 +1,30 @@
+\problemname{Sauna}
+
+Kaisa and her friends are going to the sauna!
+
+Now they have to pick the temperature. Each of them has their own temperature
+preferences as an inclusive range of acceptable values. Can you help them find
+the temperatures that everyone is happy with?
+
+Since there might be a large number of possible temperatures, they have asked
+you to just tell them how many options there are and what the lowest temperature
+that works for everyone is, as then the sauna will need less time to heat up.
+
+\section*{Input}
+
+The first line of input contains an integer, $N$, the number of people in the group ($2 \le N \le 2 \cdot 10^5$).
+The next $N$ lines each contains two integers, $a_i$ and $b_i$, indicating that
+the $i$th person's temperature preference is between $a_i$ and $b_i$, inclusive. 
+Temperatures are given in millidegrees Celsius, with $0 \le a_i \le b_i \le 2 \cdot 10^5$.
+
+\section*{Output}
+
+Output two integers: first, the number of different temperatures (in millidegrees
+Celsius) that fit all preferences; and second, the lowest such value.
+
+If there are no values that fit all preferences, instead output ``bad news''.
+
+\textbf{Explanation for sample 1}
+
+There are three possible temperatures that all three people will be
+happy with: 70003, 70004, 70005.

@@ -1,0 +1,25 @@
+\problemname{Pillow Stacking}
+
+Eleanor has recently lost her favorite pillow.
+Being very particular about her pillows, she categorizes pillows by their softness.
+The pillow she lost had softness $C$, and she will be unable to sleep without this exact softness.
+While she has access to some other types of pillows, there may not be any of her desired softness.
+As a work-around, she is willing to sleep with multiple pillows in a stack.
+When pillows with softness $C_1, C_2, \ldots, C_k$ are stacked together in that order, the resulting softness is equal to 
+\[
+    C_1 + \left\lceil \frac{C_2}{2} \right\rceil + \left\lceil \frac{C_3}{4} \right\rceil + \ldots + \left\lceil \frac{C_k}{2^{k-1}} \right\rceil.
+\]
+In other words, the $i$th pillow in the stack contributes $2^{-(i-1)}$ of its softness, rounded up.
+Note that $\lceil f \rceil$ is defined as the smallest integer $x$ with $x \geq f$.
+
+Eleanor has a lot of money and is willing to use an unlimited amount of each pillow type she has access to.
+Can you help her determine if there is a way to stack pillows to reach her desired softness?
+
+\section*{Input}
+The first line of input contains two integers $N$ and $C$ ($1 \leq N \leq 10^3$ and $1 \leq C \leq 10^4$).
+$N$ indicates the number of types of pillows Eleanor has access to, and $C$ indicates the desired softness level.
+The next line contains $N$ integers $a_1, a_2, \ldots, a_N$ ($1 \leq a_i \leq 10^{18}$), indicating the softness of pillows that Eleanor has access to.
+
+\section*{Output}
+If it is possible for Eleanor to stack pillows to reach softness $C$, output \texttt{YES}. 
+Otherwise, output \texttt{NO}.

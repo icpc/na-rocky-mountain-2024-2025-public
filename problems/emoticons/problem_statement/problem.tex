@@ -1,0 +1,77 @@
+\problemname{Emoticons}
+
+Emma is a college student who regularly posts messages on her favorite social media,
+which supports several emoticons---%
+a pictorial representation of a facial expression using characters.
+%
+One day, she noticed that some emoticons in her message were automatically converted to
+the corresponding emojis by the platform.
+%
+For example, if she sends a message ``\texttt{Hello ;-)}'' to the platform,
+the actual post will be ``\texttt{Hello }\includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/04.png}''.
+%
+If two or more emoticons overlap in a message,
+the system always converts the leftmost emoticon first.
+
+Here is the complete list of the supported emoticons on that social media.
+
+\vspace*{1em}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{c|c|c|l} 
+  Type & Emoticon & Emoji & Meaning\\
+  \hline\hline
+  Western & \texttt{:)}  & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/01.png} & Smiley\\
+  Western & \texttt{:-)} & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/01.png} & Smiley\\
+  Western & \texttt{:-(} & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/03.png} & Frown\\
+  Western & \texttt{;-)} & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/04.png} & Wink\\
+  Western & \texttt{xD}  & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/05.png} & Laughing\\
+  \hline
+  Eastern & \texttt{\textasciicircum{}\_\textasciicircum{}} & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/01.png} & Smiley\\
+  Eastern & \texttt{-\_-}                                   & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/07.png} & Expressionless\\
+  Eastern & \texttt{\textasciicircum{}o\textasciicircum{}}  & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/08.png} & Screwed\\
+  Eastern & \texttt{\textasciicircum{}\textasciicircum{};}  & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/09.png} & Sweating\\
+  Eastern & \texttt{(..)}                                   & \includegraphics[clip, trim={7px 7px 7px 7px}, width=1.1em, height=1.1em]{images/10.png} & Looking down\\
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+\vspace*{1em}
+
+She always uses the following ``visible'' characters and the space character ``\texttt{ }''.
+
+\begin{itemize}
+  \item Digits: \texttt{0123456789}
+  \item Uppercase letters: \texttt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}
+  \item Lowercase letters: \texttt{abcdefghijklmnopqrstuvwxyz}
+  \item %
+  \ifpdf% PDF version
+  Symbols: \texttt{!"\#\$\%\&\textquotesingle{}()*+,-./:;<=>?@[\textbackslash{}]\textasciicircum{}\_\`{}\{|\}\textasciitilde{}}
+  \else% HTML version
+  Symbols: \texttt{!"\#\$\%\&}\verb|'|\texttt{()*+,-./:;<=>?@[\textbackslash{}]\textasciicircum{}\_\`{}\{|\}\textasciitilde{}}
+  \fi%
+\end{itemize}
+
+Today, just before posting, she accidentally replaced all occurrences of one character
+in her message with another character.
+%
+Such characters include space, and she might have replaced a character with
+the same character, causing no effect.
+%
+Now, she wants to know the message length after the platform converts emoticons
+into emojis, where she counts each emoji as one character.
+
+Can you help her find the minimum and maximum possible message lengths?
+
+
+\section*{Input}
+
+The input contains Emma's original text (before she accidentally replaced characters)
+on one line.
+The text contains at most $100$ characters,
+consisting of the visible ASCII characters defined above and the space character.
+%
+Her text is not empty, and its first and last characters are visible characters.
+
+\section*{Output}
+
+Output two integers,
+the minimum and the maximum possible message lengths
+after emoticons in her message are converted into emojis.

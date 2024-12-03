@@ -1,0 +1,9 @@
+uuid: 76933e23-e7f6-4417-99b7-091f7fff22e5
+source: Rocky Mountain Regional Programming Contest 2024
+license: cc by-sa
+name: Always Know Where Your Towel Is
+author: Zachary Friggstad
+rights_owner: Rocky Mountain Regional Programming Contest 2024
+validation: custom
+limits:
+  time_multiplier: 1.5

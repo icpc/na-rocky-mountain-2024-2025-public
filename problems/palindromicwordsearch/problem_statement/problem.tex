@@ -1,0 +1,20 @@
+\problemname{Palindromic Word Search}
+
+Given a rectangular grid of uppercase letters, find a rectangular region of the grid of maximum possible area such that there is a horizontal palindrome spanning some row of the rectangular region and a vertical palindrome spanning some column of the rectangular region.
+Recall a palindrome is a string that equals its own reversal.
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=0.8\textwidth]{palindromic.pdf}
+  \caption{Illustration of optimal solutions to the sample inputs. In the shaded subregions, a palindrome spanning an entire row of the region and a palindrome spanning an entire column of the region are highlighted.}
+  \end{center}
+\end{figure}
+
+\section*{Input}
+
+The first line contains two integers $R$ and $C$ ($1 \leq R,C \leq 500$). Then next $R$ lines describe the grid,
+each containing exactly $C$ uppercase letters.
+
+\section*{Output}
+Output a single integer $A$ indicating the largest area of a rectangular region of the grid 
+such that there is a horizontal palindrome spanning some row and a vertical palindrome spanning some column of the rectangular region.
